@@ -1,0 +1,586 @@
+/* General Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  scroll-behavior: smooth;
+  overflow: auto;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.template {
+  background-image: url('template.jpg');
+  height: 700px;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  animation: changeImage 18s infinite;
+}
+
+@keyframes changeImage {
+  0% {
+    background-image: url('b1.jpg');
+  }
+
+  14.28% {
+    background-image: url('depositphotos_236933870-stock-photo-cute-little-staff-terrier-puppy.jpg');
+  }
+
+  28.57% {
+    background-image: url('b7.jpg');
+  }
+
+  35% {
+    background-image: url('B11.jpg');
+  }
+
+  42.85% {
+    background-image: url('b3.jpg');
+  }
+
+  57.14% {
+    background-image: url('b5.jpg');
+  }
+
+  71.42% {
+    background-image: url('b6.jpg');
+  }
+
+  85.71% {
+    background-image: url('b9.jpg');
+  }
+
+  95% {
+    background-image: url('B10.jpg');
+  }
+}
+
+.outer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+}
+
+
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: rgb(3, 157, 3);
+  padding: 20px;
+  color: white;
+}
+
+.footer-navigation ul {
+  list-style: none;
+}
+
+.footer-navigation ul li {
+  margin-bottom: 10px;
+}
+
+.footer-navigation ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+.social-media a {
+  margin-left: 10px;
+}
+
+.faq-section {
+  background-color: white;
+  padding: 20px;
+}
+
+.faq-title {
+  color: #3a6a2b;
+  margin-bottom: 20px;
+  font-size: 30px;
+}
+
+.faq {
+  display: flex;
+  flex-direction: column;
+}
+
+.faq-item {
+  margin-bottom: 15px;
+  border: 1px solid #3a6a2b;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.faq-question {
+  background-color: green;
+  color: white;
+  padding: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.faq-question:hover {
+  background-color: #2c5220;
+}
+
+.faq-answer {
+  padding: 15px;
+  background-color: #f0f8f0;
+  color: green;
+}
+
+.faq-item.active .faq-answer {
+  display: block;
+}
+
+.steps {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 50px;
+  background-color: #32a010;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+.step-section1,
+.step-section2 {
+  width: 100%;
+  max-width: 45%;
+  color: white;
+}
+
+.step {
+  display: flex;
+  align-items: flex-start;
+  margin: 30px 0;
+  position: relative;
+}
+
+.step .circle {
+  background-color: #fff;
+  color: green;
+  padding: 0 12px;
+  font-size: 22px;
+  font-weight: bold;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.step:hover .circle {
+  transform: scale(1.2);
+  background-color: green;
+  color: white;
+}
+
+.step p {
+  font-size: 18px;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.step-section2 {
+  transform: translateY(20px);
+}
+
+@media screen and (max-width: 768px) {
+  .navbar ul {
+    display: none;
+  }
+
+  .template {
+    height: 300px;
+    padding-top: 30%;
+  }
+
+  .steps {
+    flex-direction: column;
+    padding: 30px;
+  }
+
+  .step-section1,
+  .step-section2 {
+    width: 100%;
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .template {
+    height: auto;
+    background-position: left center;
+  }
+
+  .navbar .logo input {
+    width: 80%;
+  }
+
+  .card .content h4 {
+    font-size: 18px;
+  }
+
+  .card .content p {
+    font-size: 12px;
+  }
+}
+
+/* General Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  scroll-behavior: smooth;
+  overflow: auto;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+header,
+nav {
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(51, 161, 0);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  padding: 10px 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+.navbar .logo {
+  display: flex;
+  align-items: center;
+}
+
+.navbar .logo input {
+  margin-left: 15px;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+
+.navbar ul li {
+  padding: 0 15px;
+}
+
+.navbar ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.toggle-button {
+  display: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  color: white;
+}
+
+.nav-toggle {
+  display: none;
+}
+
+@media screen and (max-width: 576px) {
+  .toggle-button {
+    display: block;
+  }
+
+  .navbar ul {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    flex-direction: column;
+    width: 100%;
+    background-color: rgb(51, 161, 0);
+  }
+
+  .navbar ul li {
+    text-align: center;
+    padding: 15px 0;
+  }
+
+  .navbar .logo input {
+    width: 80%;
+  }
+
+  .nav-toggle:checked~ul {
+    display: flex;
+  }
+}
+
+/* Fix for cards taking 100% width */
+.outer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  background-color: rgb(51, 161, 0);
+  color: white;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease-out;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.card .content {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.card .content h4 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.card .content p {
+  font-size: 14px;
+}
+
+.card .content button {
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  width: 100px;
+  margin-top: auto;
+  align-self: flex-start;
+}
+
+.card .content button a {
+  color: green;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.card .content button:hover {
+  border: 2px solid green;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px,
+    rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+}
+
+@media screen and (max-width: 768px) {
+  .outer {
+    grid-template-columns: 1fr;
+  }
+
+  .navbar ul {
+    display: none;
+  }
+
+  .template {
+    height: 300px;
+    padding-top: 30%;
+  }
+
+  .steps {
+    flex-direction: column;
+    padding: 30px;
+  }
+
+  .step-section1,
+  .step-section2 {
+    width: 100%;
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .template {
+    height: auto;
+    background-position: left center;
+  }
+
+  .navbar .logo input {
+    width: 80%;
+  }
+
+  .card .content h4 {
+    font-size: 18px;
+  }
+
+  .card .content p {
+    font-size: 12px;
+  }
+}
+
+.contact {
+  padding: 50px 20px;
+  background-color: #f9f9f9;
+}
+
+.contact h2 {
+  text-align: center;
+  font-size: 36px;
+  color: rgb(51, 161, 0);
+}
+
+.contact p {
+  text-align: center;
+  font-size: 18px;
+  color: green;
+  margin-bottom: 40px;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.contact-info {
+  flex: 1;
+  max-width: 40%;
+  padding: 20px;
+}
+
+.contact-info h3 {
+  font-size: 24px;
+  color: rgb(51, 161, 0);
+}
+
+.contact-info p {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: green;
+  text-align: left;
+}
+
+.contact-info i {
+  color: rgb(51, 161, 0);
+  margin-right: 10px;
+}
+
+.social-icons {
+  margin-top: 20px;
+}
+
+.social-icons a {
+  text-decoration: none;
+  color: white;
+  /* background-color: rgb(51, 161, 0); */
+  margin-right: 10px;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.social-icons a i {
+  font-size: 20px;
+  color: rgb(22, 178, 2);
+
+}
+
+.contact-form {
+  flex: 1;
+  max-width: 50%;
+  padding: 3%;
+  background-color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: rgb(51, 161, 0);
+}
+
+.contact-form .input-group {
+  margin-bottom: 15px;
+}
+
+.contact-form label {
+  font-size: 16px;
+  margin-bottom: 5px;
+  display: block;
+  color: #333;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.contact-form button {
+  padding: 10px 20px;
+  border: none;
+  background-color: rgb(51, 161, 0);
+  color: white;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.contact-form button:hover {
+  background-color: #429d06;
+}
+
+.map {
+  margin-top: 50px;
+}
+
+.map h3 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: rgb(51, 161, 0);
+}
+
+footer {
+  background-color: rgb(51, 161, 0);
+  padding: 15px;
+  text-align: center;
+  color: white;
+}
